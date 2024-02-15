@@ -6,10 +6,11 @@ const AddTransaction = () => {
   return (
     <>
       <h3>Add New Transaction</h3>
-      <form>
+      <form id="add-transaction">
         <div className="form-control">
-          <label htmlFor="text">Text</label>
+          <label htmlFor="inc-exp">Text</label>
           <input
+            id="inc-exp"
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -22,6 +23,7 @@ const AddTransaction = () => {
             (negative - expense, positive - income)
           </label>
           <input
+            id="amount"
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
